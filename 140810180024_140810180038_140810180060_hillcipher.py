@@ -1,5 +1,4 @@
-#Muhammad Razzaaq Fadilah
-#140810180024
+#140810180024, 140810180038, 140810180060
 #Hill Cipher
 import numpy as np
 
@@ -43,7 +42,7 @@ def matriks_invers_mod_26(matriks_kunci, ordo):
     
     for i in range(int(ordo)):
         for j in range(int(ordo)):
-            matriks_adjoint[i][j] = matriks_adjoint[i][j] % 26
+            matriks_adjoint[i][j] = round(matriks_adjoint[i][j]) % 26
 
     return matriks_adjoint * invers_mod
 
